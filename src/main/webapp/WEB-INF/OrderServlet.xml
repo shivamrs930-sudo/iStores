@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<servlet>
+    <servlet-name>OrderServlet</servlet-name>
+    <servlet-class>controller.OrderServlet</servlet-class> </servlet>
