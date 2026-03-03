@@ -5,23 +5,24 @@ import java.sql.DriverManager;
 
 public class DBConnection {
 
-    public static Connection getConnection() {
+    public static Connection getConnection(){
 
-        Connection con = null;
+        Connection conn = null;
 
-        try {
+        try{
+
             Class.forName("com.mysql.cj.jdbc.Driver");
 
-            con = DriverManager.getConnection(
-                    "jdbc:mysql://localhost:3306/istore",
+            conn = DriverManager.getConnection(
+                    "jdbc:mysql://localhost:3306/iStore",
                     "root",
                     ""
             );
 
-        } catch (Exception e) {
+        }catch(Exception e){
             e.printStackTrace();
         }
 
-        return con;
+        return conn;
     }
 }

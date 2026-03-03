@@ -4,6 +4,14 @@
 <%@ page import="dao.ProductDao" %>
 <%@ page import="model.Product" %>
 
+<%
+String user = (String)session.getAttribute("user");
+
+if(user == null){
+    response.sendRedirect("login.jsp");
+}
+%>
+
 <!DOCTYPE html>
 <html>
 <head>

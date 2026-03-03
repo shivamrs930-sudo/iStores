@@ -1,5 +1,10 @@
 <%@ page import="java.sql.*" %>
-
+<%
+if(session.getAttribute("user")==null){
+response.sendRedirect("login.jsp");
+return;
+}
+%>
 <%
 String message="";
 

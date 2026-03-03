@@ -4,6 +4,14 @@
 <%@ page import="model.Product" %>
 <%@ page import="java.util.*" %>
 
+
+<%
+String user = (String)session.getAttribute("user");
+
+if(user == null){
+    response.sendRedirect("login.jsp");
+}
+%>
 <!DOCTYPE html>
 <html>
 <head>
